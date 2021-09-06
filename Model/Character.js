@@ -1,42 +1,65 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const informationUserSchema = new Schema(
+  {
+    "Starting Mana":{
+      type : String,
+    },
+    Armor: {
+      type: String,
+    },
+
+    "Atk Spd": {
+      type: String,
+    },
+
+    Cost: {
+      type: String,
+    },
+    "Crit Rate": {
+      type: String,
+    },
+    DPS: {
+      type: String,
+    },
+    Damage: {
+      type: String,
+    },
+    Health: {
+      type: String,
+    },
+    MR: {
+      type: String,
+    },
+    Mana: {
+      type: String,
+    },
+    Range: {
+      type: String,
+    },
+  },
+  { _id: false }
+);
+
 const CharacterSchema = new Schema({
-  Name: {
+  name: {
     type: String,
   },
-  Icon: {
+  icon: {
     type: String,
   },
-  Cost: {
+  class: {
+    type: [String],
+  },
+  origin: {
     type: String,
   },
-  Health: {
-    type: String,
+  items: {
+    type: [String],
   },
-  Mana: {
-    type: String,
-  },
-  "Starting Mana": {
-    type: String,
-  },
-  Armor: {
-    type: String,
-  },
-  MR: {
-    type: String,
-  },
-  DPS: {
-    type: String,
-  },
-  Damage: {
-    type: String,
-  },
-  "Crit Rate": {
-    type: String,
-  },
-  Range: {
-    type: String,
+  information: {
+    type: informationUserSchema,
   },
 });
 
