@@ -1,7 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-const uri =
-  "mongodb+srv://dbMember:O0gIMt3BB87r8SxF@cluster0.nibth.mongodb.net/TFT?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI;
 
 const connect = async () => {
   try {

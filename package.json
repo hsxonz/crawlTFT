@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.13.7",
     "pupeteer": "^0.0.1"
   }
 }
